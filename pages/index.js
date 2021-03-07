@@ -1,4 +1,5 @@
 import Head from "next/head";
+import ArticleList from "../components/ArticleList";
 
 export default function Home(props) {
 	return (
@@ -8,14 +9,7 @@ export default function Home(props) {
 				<meta name="keywords" content="web development with next" />
 			</Head>
 			Hello NEXT!
-			{props.articles.map((article, i) => {
-				return (
-					<div key={i}>
-						<h3>{article.title}</h3>
-						<p>{article.body}</p>
-					</div>
-				);
-			})}
+			<ArticleList articles={props.articles} />
 		</div>
 	);
 }

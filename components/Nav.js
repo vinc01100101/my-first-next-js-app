@@ -10,10 +10,14 @@ const Nav = () => {
 		>
 			<ul className={navStyles.ul}>
 				<li className={navStyles.li}>
-					<Link href="/">Home</Link>
+					<Link href="/">
+						<a>Home</a>
+					</Link>
 				</li>
 				<li>
-					<Link href="/about">About</Link>
+					<Link href="/about">
+						<a>About</a>
+					</Link>
 				</li>
 			</ul>
 		</nav>
