@@ -1,12 +1,15 @@
+import Link from "next/link";
 import articleStyles from "../styles/Article.module.css";
 
 const ArticleItem = ({ article }) => {
-	return (
-		<div className={articleStyles.card}>
-			<h3>{article.title}</h3>
-			<p>{article.body}</p>
-		</div>
-	);
+  return (
+    <Link href="/article/[id]" as={`/article/${article.id}`}>
+      <a className={articleStyles.card}>
+        <h3>{article.title}</h3>
+        <p>{article.body}</p>
+      </a>
+    </Link>
+  );
 };
 
 export default ArticleItem;
